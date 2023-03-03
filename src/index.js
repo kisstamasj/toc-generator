@@ -60,7 +60,7 @@ function start() {
 
     if (flags.folder) {
         console.log('-------------- Show files in folder --------------');
-        fs.readdir(flags.folder, (err, files) => {
+        fs.readdirSync(flags.folder, (err, files) => {
             files.forEach(file => {
                 console.log(file);
             });

@@ -144,6 +144,8 @@ function makeElement(renderd, path) {
 }
 
 function readFile(filePath) {
+    if (path.extname(filePath) != '.md') return;
+
     const data = fs.readFileSync(filePath, 'utf8');
     const renderd = render(data);
     fs.appendFileSync(README_FILE, makeElement(renderd, filePath));

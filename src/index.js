@@ -59,6 +59,15 @@ function start() {
     }
 
     if (flags.folder) {
+        console.log('-------------- Show files in folder --------------');
+        fs.readdir(flags.folder, (err, files) => {
+            files.forEach(file => {
+                console.log(file);
+            });
+        });
+
+        console.log('---------------------------------------------------');
+
         if (!fs.lstatSync(flags.folder).isDirectory()) {
             throw new Error(`${flags.folder} is not a directory`)
         }

@@ -1,0 +1,16 @@
+{
+  "name": "md-tabele-of-contents",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "args": "^5.0.3",
+    "indent-string": "^5.0.0",
+    "markdown-toc": "^1.2.0",
+    "remarkable": "^2.0.1"
+  }
+}

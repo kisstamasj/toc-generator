@@ -6,6 +6,7 @@ import fs from 'fs'
 import indentString from 'indent-string';
 import path from 'path';
 import args from 'args'
+import { exit } from 'process';
 
 args
   .option('file', 'The name of the md file with path (./mds/example.md)')
@@ -21,6 +22,7 @@ try {
     start()
 } catch (err) {
     console.error(err);
+    exit(1)
 }
 
 function initReadme(customReadme = '')
